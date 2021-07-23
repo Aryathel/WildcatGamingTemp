@@ -193,7 +193,7 @@ class RoleReaction(commands.Cog, name = "Role Reaction"):
                         await prompt.edit(embed = embed)
                         continue
                 # Record the role information.
-                    roles.append({'emoji': emoji.id, 'role': role.id, 'role_mention': role.mention})
+                    roles.append({'emoji': emoji, 'role': role.id, 'role_mention': role.mention})
                 else:
                     if reaction.emoji in [r['emoji'] for r in roles]:
                         embed.description = f"You cannot register an emoji that is already in use!\nPlease __**add an emoji as a reaction to this message to pair it**__."
