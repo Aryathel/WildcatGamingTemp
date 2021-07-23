@@ -17,9 +17,9 @@ class EmbedUtil:
         self.timestamp = bot.embed_ts
         self.show_author = bot.show_command_author
 
-    def get_embed(self, title = None, desc = None, fields = None, ts = False,
-                    author = None, thumbnail = None, image = None, footer = None,
-                    footer_image = None, url = None, color = None):
+    def get_embed(self, title=None, desc=None, fields=None, ts=False,
+                  author=None, thumbnail=None, image=None, footer=None,
+                  footer_image=None, url=None, color=None):
         """Function | Create Embedded Message
 
         This function reads the default embed settings from the bot
@@ -27,15 +27,18 @@ class EmbedUtil:
         of the input.
         """
         embed = discord.Embed(
-            title = title,
-            description = desc,
-            url = url,
-            color = self.embed_color if not color else color
+            color=self.embed_color if not color else color
         )
+        if title:
+            embed.title = title
+        if desc:
+            embed.description = desc
+        if url:
+            embed.url = url
         if not footer == False:
             embed.set_footer(
-                text = self.footer if not footer else footer,
-                icon_url = self.footer_image if not footer_image else footer_image
+                text=self.footer if not footer else footer,
+                icon_url=self.footer_image if not footer_image else footer_image
             )
         if ts:
             embed.timestamp = self.timestamp()
@@ -43,33 +46,33 @@ class EmbedUtil:
             if type(author) == dict:
                 if 'icon_url' in author and author['icon_url']:
                     embed.set_author(
-                        name = author['name'],
-                        icon_url = author['icon_url']
+                        name=author['name'],
+                        icon_url=author['icon_url']
                     )
                 else:
                     embed.set_author(
-                        name = author['name']
+                        name=author['name']
                     )
             else:
                 embed.set_author(
-                    name = author.name,
-                    icon_url = author.avatar_url
+                    name=author.name,
+                    icon_url=author.avatar_url
                 )
 
         if fields:
             for field in fields:
                 embed.add_field(
-                    name = field['name'],
-                    value = field['value'],
-                    inline = field['inline'] if 'inline' in field.keys() else True
+                    name=field['name'],
+                    value=field['value'],
+                    inline=field['inline'] if 'inline' in field.keys() else True
                 )
         if thumbnail:
             embed.set_thumbnail(
-                url = thumbnail
+                url=thumbnail
             )
         if image:
             embed.set_image(
-                url = image
+                url=image
             )
         return embed
 
