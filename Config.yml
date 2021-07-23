@@ -1,0 +1,55 @@
+# The name of the environment variable which will store the bot token.
+Token Env Var: WilcatGamingBotToken
+
+# Command prefix for all commands.
+Prefix: '!'
+
+# The channel ID of the channel that the bot will send messages to.
+Log Channel: 687847928076828678
+
+# Whether to have the custom error logging active
+DEBUG: false
+
+# Sets the 'Playing' status of the bot.
+Game Status:
+  # 'true' will display 'Playing ___' (___ set below), 'false' won't display anything.
+  Active: true
+
+  # The game activity to display.
+  # NOTE: Use '{prefix}' as a placeholder for the bots command prefix.
+  # Default: '{prefix}help'
+  Game: '{prefix}help'
+
+# Settings that will apply to almost every embedded message unless specified otherwise.
+Embed Settings:
+  # The color of the sidebar for embedded messages, in RGB standard.
+  Color:
+    r: 0
+    g: 51
+    b: 102
+
+  # This option will delete the user's message after they send a command.
+  # NOTE: The bot needs "manage messages" permission for this to work.
+  Delete Commands: false
+
+  # Whether or not to show the author of every command in the response given.
+  # NOTE: Works well with the "Delete Commands" option above.
+  Show Author: false
+
+  Footer:
+    # The text for the footer of the messages.
+    Text: "UArizona Esports Bot v2.0.1b"
+
+    # The url for the icon at the bottom of your footer image.
+    Icon URL: https://uastreamteam.heroicoshm.page/static/img/high-res.png
+
+# The text for the online log message.
+# NOTE: Use '{username}' as a placeholder for the bot's username.
+Online Message: '{username} Online!'
+
+# The text for the restarting log message.
+# NOTE: Use '{username}' as a placeholder for the bot's username.
+Restarting Message: '{username} Restarting...'
+
+# The file where data gets stored. Probably shouldn't mess with this.
+Data File: ./Data/data_storage.json

@@ -1,0 +1,38 @@
+{
+  "roles": {
+    "Member": 785610206364827698,
+    "Admin": 795841931430985749,
+    "Moderator": 793680263476936734
+  },
+  "permissions": {
+    "prefix": ["{Admin}"],
+    "restart": ["{Admin}"],
+    "cog": ["{Admin}"],
+    "cog-load": ["{Admin}"],
+    "cog-unload": ["{Admin}"],
+    "cog-reload": ["{Admin}"],
+    "ping": ["{Member}"],
+    "uptime": ["{Member}"],
+    "logs": ["{Moderator}", "{Admin}"],
+    "logs-edit": ["{Admin}"],
+    "mute": ["{Moderator}", "{Admin}"],
+    "unmute": ["{Moderator}", "{Admin}"],
+    "charinfo": ["{Member}"],
+    "hexconvert": ["{Member}"],
+    "message": ["{Admin}"],
+    "message-create": ["{Admin}"],
+    "message-edit": ["{Admin}"],
+    "message-delete": ["{Admin}"],
+    "message-send": ["{Admin}"],
+    "message-stop": ["{Admin}"],
+    "rr": ["{Admin}"],
+    "rr-create": ["{Admin}"],
+    "rr-delete": ["{Admin}"],
+    "rr-edit": ["{Admin}"],
+    "rr-start": ["{Admin}"],
+    "rr-stop": ["{Admin}"],
+    "school": ["{Member}"],
+    "school-add": ["{Admin}"],
+    "school-remove": ["{Admin}"]
+  }
+}
